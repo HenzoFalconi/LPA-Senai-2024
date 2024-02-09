@@ -18,8 +18,8 @@ programa
 		mult = n1*n2
 
 		escreva("Soma: ",soma,"\n")
-		escreva("Multiplicação: ",mult,"\n")
 		escreva("Subtração: ",sub,"\n")
+		escreva("Multiplicação: ",mult,"\n")
 		escreva("Divisão: ",div,"\n")
 	}
 }
@@ -29,7 +29,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 356; 
+ * @POSICAO-CURSOR = 337; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
