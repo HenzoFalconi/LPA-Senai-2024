@@ -49,12 +49,8 @@ programa
 	escreva ("Você comprou: ",qtd_refri, " refris.\n")
 	escreva ("Você comprou: ",qtd_sobremesa, " sobremesas.\n")
 	escreva ("============================================\n")
-	escreva ("Total da compra: R$", tot_total,"\n")
+	escreva ("Total da compra: R$ ", tot_total,"\n")
 	
-	
-
-	
-		
 	}
 }
 /* $$$ Portugol Studio $$$ 
@@ -62,7 +58,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 411; 
+ * @POSICAO-CURSOR = 1313; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
