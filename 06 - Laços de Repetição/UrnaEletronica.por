@@ -51,6 +51,11 @@ programa
 			escreva("Candidato B: ", candidatoB, " voto(s). ", mat.arredondar(porcentCandB,2)," % do total\n")
 			escreva("Brancos: ", brancos, " voto(s). ", mat.arredondar(porcentBrancos,2)," % do total\n")
 			escreva("Nulos: ", nulos, " voto(s). ", mat.arredondar(porcentNulos,2)," % do total\n")
+
+			se (porcentCandA == porcentCandB){
+				escreva("\n")
+				escreva("Vai para segundo turno\n")
+			}
 		}
 	}
 }
@@ -59,7 +64,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 1546; 
+ * @POSICAO-CURSOR = 1659; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
