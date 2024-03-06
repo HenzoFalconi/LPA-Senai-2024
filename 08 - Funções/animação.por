@@ -4,7 +4,7 @@ programa {
 	funcao inicio()
 	{
 		inteiro coluna_inicial = 0
-		inteiro passos = 10
+		inteiro passos = 100
 		inteiro coluna_final = coluna_inicial + passos
 		para (inteiro coluna = coluna_inicial; coluna < coluna_final; coluna++) {
 			para(inteiro andando = 0; andando <= 1; andando ++) {
@@ -47,7 +47,7 @@ programa {
 					}
 				escreva("( )( )( )( )(0.0)")
 				}
-				u.aguarde(500)
+				u.aguarde(400)
 			}
 		}
 	}
@@ -57,7 +57,7 @@ programa {
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 971; 
+ * @POSICAO-CURSOR = 1165; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
