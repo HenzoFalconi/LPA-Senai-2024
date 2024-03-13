@@ -5,7 +5,7 @@ programa
 	{
 		inteiro n = 7
 		fatorial(n)
-		//escreva("O fatorial de ",n, " é ",fatorial(n),"\n")
+		escreva("O fatorial de ",n, " é ",fatorial(n),"\n")
 		escreva("O fatorial de ",n, " usando fatorial2() é ",fatorial2(n),"\n")
 		
 	}
@@ -34,7 +34,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 495; 
+ * @POSICAO-CURSOR = 65; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = {n, 12, 33, 1};
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
