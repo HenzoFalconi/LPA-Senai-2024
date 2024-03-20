@@ -33,12 +33,13 @@ programa
 			z = u.sorteia(1, 255)
 		}
 		g.definir_cor(g.criar_cor(x, y, z))
-		para(inteiro i = 0; i <= largura_janela/10; i++){
-			para (inteiro j = 0;j <= altura_janela/10; j++){
-			g.desenhar_retangulo(
-				i*espacamento+ espacamento*m.cosseno((fase +i*20)*2*m.PI/360), 
-				j*espacamento + espacamento*m.seno((fase + j * espacamento)*2*m.PI/360),
-				8,8, falso, verdadeiro)
+		para(inteiro i = 0; i <= largura_janela/espacamento; i++){
+			para (inteiro j = 0;j <= altura_janela/espacamento; j++){
+			g.desenhar_elipse(
+				i*espacamento+ espacamento*m.cosseno((fase +i*espacamento)*20*m.PI/360), 
+				j*espacamento + espacamento*m.seno((fase +i* espacamento)*20*m.PI/360),
+				11,11, verdadeiro)
+				
 			}
 		}
 		
@@ -66,7 +67,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 262; 
+ * @POSICAO-CURSOR = 1227; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
