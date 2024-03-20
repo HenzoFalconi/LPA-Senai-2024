@@ -1,6 +1,6 @@
 programa
 {
-	inclua biblioteca Internet
+	inclua biblioteca Matematica --> m
 	inclua biblioteca Teclado --> t
 	inclua biblioteca Util --> u
 	inclua biblioteca Graficos --> g
@@ -8,19 +8,30 @@ programa
 	funcao inicio()
 	{
 		g.iniciar_modo_grafico(verdadeiro)
-		inteiro largura_janela= 500
-		inteiro altura_janela= 500
+		inteiro largura_janela= 1920
+		inteiro altura_janela= 1080
 		g.definir_dimensoes_janela(largura_janela, altura_janela)
 		g.definir_titulo_janela("Gráficos")
 		cadeia corin = "Vai Corinthians!"
-	
+		inteiro k = 0
+		inteiro x = 0
+		inteiro y = 0
+		inteiro z = 0
+
+		
+		
 		enquanto (nao t.tecla_pressionada(t.TECLA_ESC)) {
-		g.definir_cor(g.COR_BRANCO)
-		g.limpar()
 		g.definir_cor(g.COR_PRETO)
-		para(inteiro i = 0; i <= largura_janela/20; i++){
-			para (inteiro j = 0;j <= altura_janela/20; j++){
-			g.desenhar_retangulo(i*20, j*20, 16, 16, falso, verdadeiro)
+		g.limpar()
+		para(inteiro s = 0; s < 255; s++){
+			x = u.sorteia(1, 255)
+			y = u.sorteia(1, 255)
+			z = u.sorteia(1, 255)
+		}
+		g.definir_cor(g.criar_cor(x, y, z))
+		para(inteiro i = 0; i <= largura_janela/10; i++){
+			para (inteiro j = 0;j <= altura_janela/10; j++){
+			g.desenhar_retangulo(i*20+ 20*m.cosseno(k*2000*m.PI/360), j*20 + 20*m.seno(k*2000*m.PI/360),8,8, falso, verdadeiro)
 			}
 		}
 		
@@ -32,9 +43,10 @@ programa
 		//g.largura_texto(corin)
 		//g.definir_tamanho_texto(40)
 		//g.desenhar_texto(120, 240, corin)
-		
 		g.renderizar()
 		u.aguarde(5)
+		k++
+		
 		}
 		g.encerrar_modo_grafico()
 	}
@@ -44,7 +56,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 1102; 
+ * @POSICAO-CURSOR = 461; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
