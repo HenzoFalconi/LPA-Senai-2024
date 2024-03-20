@@ -1,0 +1,53 @@
+programa
+{
+	inclua biblioteca Matematica --> m
+	inclua biblioteca Teclado --> t
+	inclua biblioteca Util --> u
+	inclua biblioteca Graficos --> g
+	
+	funcao inicio()
+	{
+		g.iniciar_modo_grafico(verdadeiro)
+		inteiro largura_janela= 1920
+		inteiro altura_janela= 1080
+		g.definir_dimensoes_janela(largura_janela, altura_janela)
+		g.definir_titulo_janela("Gráficos")
+		cadeia corin = "Vai Corinthians!"
+		inteiro k = 0
+		inteiro x = 0
+		inteiro y = 0
+		inteiro z = 0
+
+		
+		
+		enquanto (nao t.tecla_pressionada(t.TECLA_ESC)) {
+		g.definir_cor(g.COR_PRETO)
+		g.limpar()
+		para(inteiro s = 0; s < 255; s++){
+			x = u.sorteia(1, 255)
+			y = u.sorteia(1, 255)
+			z = u.sorteia(1, 255)
+		}
+		g.definir_cor(g.criar_cor(x, y, z))
+		para(inteiro i = 0; i <= largura_janela/10; i++){
+			para (inteiro j = 0;j <= altura_janela/10; j++){
+			g.desenhar_retangulo(i*20+ 20*m.cosseno(k*2000*m.PI/360), j*20 + 20*m.seno(k*2000*m.PI/360),12,12, falso, verdadeiro)
+			}
+		}
+		
+		//g.desenhar_retangulo(300, 100, 100, 100, verdadeiro, verdadeiro)
+		//g.desenhar_retangulo(100, 300, 300, 100, verdadeiro, verdadeiro)
+		//g.desenhar_elipse(100, 300, 300, 100, verdadeiro)
+		//g.definir_cor(g.COR_VERMELHO)
+		//g.desenhar_elipse(170, 345, 200, 50, verdadeiro)
+		//g.largura_texto(corin)
+		//g.definir_tamanho_texto(40)
+		//g.desenhar_texto(120, 240, corin)
+		g.renderizar()
+		u.aguarde(5)
+		k++
+		
+		}
+		g.encerrar_modo_grafico()
+	}
+}
