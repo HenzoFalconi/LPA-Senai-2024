@@ -4,21 +4,25 @@ programa
 	inclua biblioteca Teclado --> t
 	inclua biblioteca Util --> u
 	inclua biblioteca Graficos --> g
-	
+
 	funcao inicio()
 	{
 		g.iniciar_modo_grafico(verdadeiro)
 		inteiro largura_janela= 1920
 		inteiro altura_janela= 1080
+		inteiro espacamento = 20
 		g.definir_dimensoes_janela(largura_janela, altura_janela)
 		g.definir_titulo_janela("Gráficos")
 		cadeia corin = "Vai Corinthians!"
-		inteiro k = 0
+		desenhar_ondas(largura_janela,altura_janela,espacamento)
+		
+		
+	}
+	funcao desenhar_ondas(inteiro largura_janela, inteiro altura_janela, inteiro espacamento){
+		inteiro fase = 0
 		inteiro x = 0
 		inteiro y = 0
 		inteiro z = 0
-
-		
 		
 		enquanto (nao t.tecla_pressionada(t.TECLA_ESC)) {
 		g.definir_cor(g.COR_PRETO)
@@ -31,9 +35,13 @@ programa
 		g.definir_cor(g.criar_cor(x, y, z))
 		para(inteiro i = 0; i <= largura_janela/10; i++){
 			para (inteiro j = 0;j <= altura_janela/10; j++){
-			g.desenhar_retangulo(i*20+ 20*m.cosseno(k*2000*m.PI/360), j*20 + 20*m.seno(k*2000*m.PI/360),8,8, falso, verdadeiro)
+			g.desenhar_retangulo(
+				i*espacamento+ espacamento*m.cosseno((fase +i*20)*2*m.PI/360), 
+				j*espacamento + espacamento*m.seno((fase + j * espacamento)*2*m.PI/360),
+				8,8, falso, verdadeiro)
 			}
 		}
+		
 		
 		//g.desenhar_retangulo(300, 100, 100, 100, verdadeiro, verdadeiro)
 		//g.desenhar_retangulo(100, 300, 300, 100, verdadeiro, verdadeiro)
@@ -45,18 +53,20 @@ programa
 		//g.desenhar_texto(120, 240, corin)
 		g.renderizar()
 		u.aguarde(5)
-		k++
-		
+		fase++
 		}
+	
 		g.encerrar_modo_grafico()
+	
 	}
+
 }
 /* $$$ Portugol Studio $$$ 
  * 
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 461; 
+ * @POSICAO-CURSOR = 262; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
